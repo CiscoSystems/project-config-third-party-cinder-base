@@ -1,9 +1,5 @@
 ---
 - hosts: all
-  task:
-    - name: Define inventory_file fact
-      set_fact:
-        inventory_file: "/tmp/{{ zuul.build }}/ansible/inventory.yaml"
   roles:
     - start-zuul-console
     - log-inventory
