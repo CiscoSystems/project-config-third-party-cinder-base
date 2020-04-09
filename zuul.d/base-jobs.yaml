@@ -8,7 +8,6 @@
       - playbooks/post-logs.yaml
     roles:
       - zuul: zuul-jobs
-    cleanup-run: playbooks/base/cleanup.yaml
     nodeset:
       nodes:
         - name: primary
