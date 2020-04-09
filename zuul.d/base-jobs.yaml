@@ -8,6 +8,7 @@
       - playbooks/post-logs.yaml
     roles:
       - zuul: zuul-jobs
+    cleanup-run: playbooks/base/cleanup.yaml
     nodeset:
       nodes:
         - name: primary
@@ -18,4 +19,23 @@
         ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDYvFMK4GhJW0MY4rFQ0CXXASXHUNSlkhUR9RjjO7Afij7edNIcmTU4wGuU5FjgiekdXXRhEUAjy/RJnBveq2Wss52Pk0FWn+E1+/pML6yx2Wb5o0Lb0oDdanySx8MIdjUBNSAtZPQjaNzgRSkUFBEBDD1tm6E2x34X6PIxBP3VjF9eqyV9AjUMD++Yc19RG9Vq4iXkWc1du8KE4T90pYzZ6SWQQlAYodOkLinUKtchZGT2D/FQRgn/3EE3Ad3DGJ9ZllamW5PMZ9vJDVdWrnj8WlZZcRPoH4FBujZ65Ebwo4o5AQGZ7y8KOsNbgX08A56+HqMZV/dEIVBUKxzos5Fv zuuluser@cinder-zuulv3   
     secrets:
       - site_logs
-
+# See the procedure described above "base" before making changes to
+# this job.
+- job:
+    name: base-test
+    parent: null
+    ansible-version: 2.8
+    description: |
+      A job to test changes to the base job without disturbing the
+      main job in production.  Not for general use.
+    pre-run: playbooks/base-test/pre.yaml
+    post-run:
+      - playbooks/base-test/post.yaml
+      - playbooks/base-test/post-logs.yaml
+    cleanup-run: playbooks/base-test/cleanup.yaml
+    roles:
+      - zuul: zuul/zuul-jobs
+    timeout: 1800
+    post-timeout: 1800
+    nodeset: ubuntu-bionic
+    secrets: *log_clouds
