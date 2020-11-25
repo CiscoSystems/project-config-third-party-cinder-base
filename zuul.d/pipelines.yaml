@@ -11,11 +11,11 @@
           comment: (?i)^(Patch Set [0-9]+:)?( [\w\\+-]*)*(\n\n)?\s*recheck
     success:
       gerrit:
-        Verified: 1
+        Verified: 0
       buildsdb:
     failure:
       gerrit:
-        Verified: -1
+        Verified: 0
       buildsdb:
 
 - pipeline:
