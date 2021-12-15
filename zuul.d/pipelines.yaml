@@ -12,11 +12,11 @@
     success:
       gerrit:
         Verified: 0
-      buildsdb:
+      database:
     failure:
       gerrit:
         Verified: 0
-      buildsdb:
+      database:
 
 - pipeline:
     name: jobtest
@@ -26,6 +26,6 @@
         - event: ref-updated
           ref: ^refs/heads/.*$
     success:
-      buildsdb:
+      database:
     failure:
-      buildsdb:
+      database:
