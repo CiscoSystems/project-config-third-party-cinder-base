@@ -12,11 +12,9 @@
     success:
       gerrit:
         Verified: 0
-      database:
     failure:
       gerrit:
         Verified: 0
-      database:
 
 - pipeline:
     name: jobtest
