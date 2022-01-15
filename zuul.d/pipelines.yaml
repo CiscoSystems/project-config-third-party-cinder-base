@@ -24,6 +24,4 @@
         - event: ref-updated
           ref: ^refs/heads/.*$
     success:
-      database:
     failure:
-      database:
