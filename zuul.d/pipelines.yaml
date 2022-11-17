@@ -19,7 +19,7 @@
       database:
 
 - pipeline:
-    name: jobtest
+    name: check
     manager: independent
     trigger:
       github:
