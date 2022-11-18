@@ -1,6 +1,5 @@
 - project:
     name: openstack/cinder
-    queue: integrated
     check:
       jobs:
         - dsvm-tempest-cisco-zonemanager-job
