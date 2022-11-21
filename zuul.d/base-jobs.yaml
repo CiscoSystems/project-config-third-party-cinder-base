@@ -13,8 +13,8 @@
         - name: primary
           label: ubuntu
     vars:
-      logs_base_url: "http://173.39.89.140/logs"
+      logs_base_url: "http://173.39.89.157/logs"
       debug_public_key: |
-        ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDGn809OBI8uKup0WWuTu85CK4bq6/pI9o5B7DmEPjUkolj9mbYcdPcwQay6j+rQZRZ481E+RHE6SkV8J93/PHoa/oXv5L0yGOs7n+4jAI8TCbffudR+GKJMW0St5w/4o5Ak2c/BrKDXevX/MXZ3Jkh/incK6YRrw5wcvq8yCg28oVZxljQmWo0Kxl8CPLhGiWhAc9uDNA62WEG+Xi9CfsIUgKBcofvvDspqJ6HjB46ATE+9SAK34hhNf0NZgjSY5qhThHLJY4xBnxs8E9qgcqYtPw1DngjcZCkmDo8BJxA81Jr18WdJ6JjIVXv9gaDFy+dsE+Xb5CMWHohMy4UKYBV zuul@zuulserver
+        ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDYvFMK4GhJW0MY4rFQ0CXXASXHUNSlkhUR9RjjO7Afij7edNIcmTU4wGuU5FjgiekdXXRhEUAjy/RJnBveq2Wss52Pk0FWn+E1+/pML6yx2Wb5o0Lb0oDdanySx8MIdjUBNSAtZPQjaNzgRSkUFBEBDD1tm6E2x34X6PIxBP3VjF9eqyV9AjUMD++Yc19RG9Vq4iXkWc1du8KE4T90pYzZ6SWQQlAYodOkLinUKtchZGT2D/FQRgn/3EE3Ad3DGJ9ZllamW5PMZ9vJDVdWrnj8WlZZcRPoH4FBujZ65Ebwo4o5AQGZ7y8KOsNbgX08A56+HqMZV/dEIVBUKxzos5Fv zuuluser@cinder-zuulv3   
     secrets:
       - site_logs
