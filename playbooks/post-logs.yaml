@@ -3,16 +3,17 @@
     - role: add-fileserver
       fileserver: "{{ site_logs }}"
     - role: ara-report
-
+  ignore_errors: True
 - hosts: "{{ site_logs.fqdn }}"
   gather_facts: False
   roles:
     - role: upload-logs
       zuul_log_url: "{{ logs_base_url }}"
-
+  ignore_errors: True
 - hosts: all
   roles:
     - role: add-authorized-keys
       public_keys:
         - public_key: "{{ debug_public_key }}"
       when: not zuul_success | bool
+  ignore_errors: True
