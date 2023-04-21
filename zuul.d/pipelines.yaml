@@ -24,10 +24,7 @@
         - event: ref-updated
           ref: ^refs/heads/.*$
     success:
-      github:
-        check: 'success'
-        comment: false
+      database:
     failure:
-      github:
-        check: 'failure'
-        comment: false
+      database:
+
